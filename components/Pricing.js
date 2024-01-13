@@ -38,76 +38,22 @@ const Pricing2 = ({ pricings }) => {
           animate='end'
           className=''
         >
-          <div id="price" className='flex flex-col items-center justify-center mb-[30px]'>
+          <div
+            id='price'
+            className='flex flex-col items-center justify-center mb-[30px]'
+          >
             <h2 className='font-bold text-[25px] md:[35px] mb-[0px] text-center text-primary'>
               Choose a Plan
             </h2>
             <img src='/mark.png' alt='' className='w-[150px]' />
           </div>
-          {/* <div className='py-[0px] pt-[0px] px-[20px] sm:px-[30px] md:px-[50px] lg:px-[100px] xl:px-[20px] grid md:grid-cols-2  lg:grid-cols-2 xl:grid-cols-4 justify-center lg:gap-x-[20px] lg:gap-y-[30px] gap-x-[20px] gap-y-[30px]'>
-            <PackageCard
-              title='FREE'
-              subTitle='Designed for emerging schools seeking fundamental tools for managing school fees and tracking student progress.'
-              price='0'
-              buttonText='Get Started for free'
-              f1='Up to 100 students'
-              f2='School fees management'
-              f3='Student progress report'
-              f4='Dashboard'
-           
-              link='/signup'
-            />
-            <PackageCard
-              title='SCHOOL STARTER'
-              subTitle='Tailored for Expanding Schools: Streamline Fee Management, Monitor Student Progress, and Enhance Communication with Parents.'
-              price='200,000'
-              buttonText='Start free trial'
-              f1='Up to 250 students'
-              f2='School fees management'
-              f3='Student progress report'
-              f4='Dashboard'
-              f5='Attendance management'
-              f6='Communication'
-            
-              link='/signup'
-            />
-            <PackageCard
-              title='SCHOOL STANDARD'
-              subTitle='Ideal for educational institutions aiming to gather and oversee fees, administer Computer-Based Tests (CBT) assessments, and generate and monitor lesson plans.'
-              price='300,000'
-              buttonText='Start free trial'
-              f1='Up to 250 students'
-              f2='School fees management'
-              f3='Student progress report'
-              f4='Dashboard'
-              f5='Attendance management'
-              f6='Communication'
-                f7='CBT (Quizzes, Assignment, Exams)'
-                f8='Lesson plan'
-              
-              link='/signup'
-            />
-            <PackageCard
-              title='SCHOOL PRO'
-              subTitle='
-              Designed for institutions with a large student population and specific customization needs.'
-              buttonText='Contact sales'
-              f1='Unlimited students'
-              f2='School fees management'
-              f3='Student progress report'
-              f4='Dashboard'
-              f5='Attendance management'
-              f6='Communication'
-                f7='CBT (Quizzes, Assignment, Exams)'
-                f8='Lesson plan'
-                  f9='Dedicated account manager'
-              link='tel:+2347033430934'
-            />
-          </div> */}
-          <div className='py-[0px] pt-[0px] px-[20px] sm:px-[30px] md:px-[50px] lg:px-[100px] xl:px-[20px] grid md:grid-cols-2  lg:grid-cols-2 xl:grid-cols-4 justify-center lg:gap-x-[20px] lg:gap-y-[30px] gap-x-[20px] gap-y-[30px]'>
+
+          <div className='py-[0px] pt-[0px] px-[20px] sm:px-[30px] md:px-[0px] lg:px-[00px] xl:px-[0px] grid md:grid-cols-2  lg:grid-cols-2 xl:grid-cols-4 justify-center lg:gap-x-[20px] lg:gap-y-[30px] gap-x-[20px] gap-y-[30px]'>
             {pricings?.map((pr, index) => {
               const btnText =
                 index + 1 == pricings?.length ? "Contact Sales" : "Sign Up";
+
+              // const pricingLength = pricings?.length
 
               const btnLink =
                 index + 1 == pricings?.length
@@ -116,10 +62,10 @@ const Pricing2 = ({ pricings }) => {
                       ?.split(" ")
                       .join("_")
                       .toLowerCase()}&stage=about_school`;
-                      // /signup?plan=school_standard&stage=about_you
+              // /signup?plan=school_standard&stage=about_you
 
               return (
-                <div className='' key={index}>
+                <div className='max-w-[450px]' key={index}>
                   <PackageCard
                     title={pr?.plan}
                     subTitle={pr?.description}
@@ -135,6 +81,8 @@ const Pricing2 = ({ pricings }) => {
                     f8={pr?.features[7]?.name}
                     f9={pr?.features[8]?.name}
                     link={btnLink}
+                    type={pr?.type}
+                    features={pr?.features}
                   />
                 </div>
               );

@@ -10,7 +10,7 @@ export function convertStringToNumber(amountString) {
     return numberValue;
   } else {
     // Handle the case when the conversion is not successful
-    console.error('Invalid input. Unable to convert to a number.');
+    // console.error('Invalid input. Unable to convert to a number.');
     return null;
   }
 }

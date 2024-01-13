@@ -39,6 +39,7 @@ const Payment = ({
   componentProps,
   transferCode,
   setTransferCode,
+  paymentError
 }) => {
   const [showPassword, setShowPassword] = useState(false);
   const [showPassword2, setShowPassword2] = useState(false);
@@ -241,7 +242,7 @@ const Payment = ({
       {/* row 6 */}
       <div className='flex flex-col md:flex-row md:items-start space-y-[20px] md:space-x-[50px] lg:space-x-[100px] md:space-y-0 w-full'>
         {/* left */}
-        <div className='mb-[0px] flex-[1]'>
+        {/* <div className='mb-[0px] flex-[1]'>
           <label className='label cursor-pointer flex items-center space-x-[10px] md:space-x-[10px] mb-[10px]'>
             <input
               type='radio'
@@ -275,11 +276,7 @@ const Payment = ({
           {paymentMode === "bank_transfer" && (
             <div className='flex flex-[1] w-full flex-col md:flex-row md:space-x-[10px] space-y-[10px] md:space-y-0 md:justify-center mb-[10px]'>
               <div className='form-control w-full '>
-                {/* <label className='label'>
-                <span className='label-text font-semibold'>
-                  Last Name<span className='text-secondary'>*</span>
-                </span>
-              </label> */}
+              
                 <input
                   type='text'
                   placeholder='Enter Transfer ID'
@@ -305,7 +302,7 @@ const Payment = ({
             </a>{" "}
             to confirm payment, to get account activated.
           </p>
-        </div>
+        </div> */}
 
         {/* right */}
         <div className='mb-[0px] flex-[1]'>
@@ -325,7 +322,7 @@ const Payment = ({
               checked={paymentMode === "paystack"}
             />
             <p className='leading-[18px] text-[14px] md:text-[14px] font-semibold mb-[0px] flex-[1]'>
-              Pay Stack
+              Paystack
             </p>
           </label>
           <div className='w-full mb-[10px]'>
@@ -336,14 +333,14 @@ const Payment = ({
             />
           </div>
           <p className='text-[14px] mb-[5px] '>
-            Click on make payment button to complete payment process.
+            Select Paystack and click "Make Payment" button to complete payment process.
           </p>
         </div>
       </div>
 
       {submitStatus === "error" && (
         <div className='w-full flex justify-center text-[14px] mt-[20px] text-secondary bg-secondary/20 rounded-[10px] py-[10px] px-[30px]'>
-          Please select a payment method
+          Please select payment method
         </div>
       )}
 
@@ -355,7 +352,8 @@ const Payment = ({
 
       {submitStatus === "error5" && (
         <div className='w-full flex justify-center text-[14px] mt-[20px] text-secondary bg-secondary/20 rounded-[10px] py-[10px] px-[30px]'>
-          Something went wrong
+          {paymentError || "Something went wrong. Please try again"}
+          
         </div>
       )}
 
@@ -401,7 +399,8 @@ const Payment = ({
             {
               <button
                 onClick={() => paymentSubmit()}
-                disabled={!paymentMode || submitStatus === "loading"}
+                disabled={ submitStatus === "loading"}
+                // disabled={!paymentMode || submitStatus === "loading"}
                 className='btn btn-secondary md:btn-wide flex items-center space-x-[5px]'
               >
                 {submitStatus !== "loading" && (

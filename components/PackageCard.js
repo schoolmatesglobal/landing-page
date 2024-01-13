@@ -34,12 +34,13 @@ const PackageCard = ({
   f12,
   link,
   preferred,
+  type,
 }) => {
   const [submitLoading, setSubmitLoading] = useState(false);
 
   return (
     <div
-      className={`card min-w-[250px] mb-[0px] pb-[30px]  bg-primary/5 flex flex-col  items-center text-primary  bg-base-100 shadow-md hover:shadow-lg hover:scale-[1.01] duration-200 px-[10px]`}
+      className={`card min-w-[250px] min-h-[800px] mb-[0px] pb-[30px]  bg-primary/5 flex flex-col  items-center text-primary  bg-base-100 shadow-md hover:shadow-lg hover:scale-[1.01] duration-200 px-[20px] md:px-[10px]`}
     >
       {/* title */}
       <h2 className='card-title justify-center  py-[0px] mt-[20px] mb-[10px]'>
@@ -67,7 +68,8 @@ const PackageCard = ({
             </p>
           )}
 
-          <p className='font-bold'>school/term</p>
+          <p className='font-bold'>{type}</p>
+          {/* <p className='font-bold'>school/term</p> */}
 
           <Link
             href={link}

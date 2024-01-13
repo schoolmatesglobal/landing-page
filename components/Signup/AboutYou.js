@@ -110,7 +110,12 @@ const AboutYou = ({
             />
             {!emailError && (
               <p className='text-[14px] text-secondary mt-[5px]'>
-                Please enter a valid email
+                Email format is incorrect.
+              </p>
+            )}
+            {emailError && (
+              <p className='text-[14px] text-primary mt-[5px]'>
+                Please enter only a valid email.
               </p>
             )}
           </div>

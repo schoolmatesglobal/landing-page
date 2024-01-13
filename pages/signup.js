@@ -78,6 +78,7 @@ const Signup = ({ pricings }) => {
   const [defaultPlan, setDefaultPlan] = useState(null);
   const [payCode, setPayCode] = useState("");
   const [transferCode, setTransferCode] = useState("");
+  const [paymentError, setPaymentError] = useState("");
 
   const publicKey = "pk_test_d1566876d5c4c51d7d6c763a6103fe23a16cede0";
 
@@ -164,7 +165,9 @@ const Signup = ({ pricings }) => {
       (opt) => query?.plan === opt?.label?.split(" ").join("_").toLowerCase()
     );
     if (!option) {
-      return [];
+      setPaymentPlan(planOptions()[0]?.value);
+      // return [];
+      return planOptions()[0];
     } else {
       return option;
     }
@@ -177,6 +180,8 @@ const Signup = ({ pricings }) => {
     return option[0];
   }
 
+  // const df = defaultPlanValue() === []
+
   const schoolSubmit = () => {
     setActivateError(true);
     if (
@@ -186,6 +191,7 @@ const Signup = ({ pricings }) => {
       !schoolEmail ||
       !schoolCity ||
       !paymentPlan ||
+      // defaultPlanValue()?.length === 0 ||
       !emailError2
       // ||
       // query?.plan === "initial"
@@ -323,12 +329,11 @@ const Signup = ({ pricings }) => {
       if (!transferCode) {
         setSubmitStatus("error4");
       } else {
-
         // toast.remove();
         setSubmitStatus("success");
         setSubmitError(false);
         setActivateError(false);
-        
+
         const signUp = await apiServices.signUp(signupBody);
         console.log({ signUp });
         // setSubmitSuccess(true);
@@ -342,56 +347,60 @@ const Signup = ({ pricings }) => {
         }, 5000);
       }
     } else if (paymentMode === "paystack") {
-      // toast.remove();
-      // setSubmitStatus("success");
-      // setSubmitError(false);
-      // setActivateError(false);
-      // const paystack = new PaystackPop();
-      // paystack.newTransaction({
-      //   key: "pk_test_d1566876d5c4c51d7d6c763a6103fe23a16cede0",
-      //   amount: convertStringToNumber(defaultPlanValue2()?.price) * 100,
-      //   email: schoolEmail,
-      //   firstname: firstName,
-      //   lastname: lastName,
-      //   onSuccess: (transaction) => {
-      //     let message = `Payment was successful. Reference - ${transaction?.reference}`;
-      //     console.log({ message });
-      //   },
-      //   onCancel: () => {
-      //     console.log("You have Canceled the transaction");
-      //   },
-      // });
-      // const pricings = await apiServices.getPricing();
-      // alert("hello");
+      if (!paymentMode) {
+        setSubmitStatus("error4");
+      } else {
+        try {
+          // const paymentUrl = await apiServices.postPayment(payBody);
 
-      try {
-        // const paymentUrl = await apiServices.postPayment(payBody);
+          const signUp = await apiServices.signUp(signupBody);
 
-        const signUp = await apiServices.signUp(signupBody);
+          const paymentUrl = await apiServices.postPayment(payBody);
 
-        const paymentUrl = await apiServices.postPayment(payBody);
+          console.log({ paymentUrl, signUp });
 
-        console.log({ paymentUrl, signUp });
+          window.location.href = paymentUrl?.url;
 
-        window.location.href = paymentUrl?.url;
+          // setSubmitStatus("success");
+          // router.push({
+          //   pathname: "/payment",
+          //   query: { status: "success" },
+          // });
 
-        // setSubmitStatus("success");
+          // await apiServices.postPayment(payBody);
+        } catch (error) {
+          console.log({ pe: error });
+          setPaymentError(error?.response?.data?.message);
+          setSubmitStatus("error5");
+        }
         // router.push({
         //   pathname: "/payment",
         //   query: { status: "success" },
         // });
-
-        // await apiServices.postPayment(payBody);
-      } catch (error) {
-        console.log(error);
-        setSubmitStatus("error5");
+        // setStage("you");
       }
-      // router.push({
-      //   pathname: "/payment",
-      //   query: { status: "success" },
-      // });
-      // setStage("you");
     }
+    // toast.remove();
+    // setSubmitStatus("success");
+    // setSubmitError(false);
+    // setActivateError(false);
+    // const paystack = new PaystackPop();
+    // paystack.newTransaction({
+    //   key: "pk_test_d1566876d5c4c51d7d6c763a6103fe23a16cede0",
+    //   amount: convertStringToNumber(defaultPlanValue2()?.price) * 100,
+    //   email: schoolEmail,
+    //   firstname: firstName,
+    //   lastname: lastName,
+    //   onSuccess: (transaction) => {
+    //     let message = `Payment was successful. Reference - ${transaction?.reference}`;
+    //     console.log({ message });
+    //   },
+    //   onCancel: () => {
+    //     console.log("You have Canceled the transaction");
+    //   },
+    // });
+    // const pricings = await apiServices.getPricing();
+    // alert("hello");
   };
 
   const personBack = () => {
@@ -453,14 +462,14 @@ const Signup = ({ pricings }) => {
   //   }
   // }, []);
 
-  // useEffect(() => {
-  //   if (query?.stage != "about_school" && !schoolName) {
-  //     router.push({
-  //       pathname: "/signup",
-  //       query: { plan: `initial`, stage: "about_school" },
-  //     });
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (query?.stage != "about_school" && !schoolName) {
+      router.push({
+        pathname: "/signup",
+        query: { plan: `initial`, stage: "about_school" },
+      });
+    }
+  }, []);
 
   //   useEffect(() => {
   //     setPhone(defaultPhoneValue()[0]?.code);
@@ -482,6 +491,7 @@ const Signup = ({ pricings }) => {
 
   console.log({
     // signupBody,
+    paymentError,
     transferCode,
     payCode,
     payBody,
@@ -657,6 +667,7 @@ const Signup = ({ pricings }) => {
               PaystackButton={PaystackButton}
               transferCode={transferCode}
               setTransferCode={setTransferCode}
+              paymentError={paymentError}
             />
           )}
 

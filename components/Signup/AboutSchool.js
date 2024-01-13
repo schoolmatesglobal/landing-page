@@ -222,7 +222,7 @@ const AboutSchool = ({
               setValue={setPaymentPlan}
               errorCheck={
                 activateError && (!paymentPlan 
-                  // || query?.plan === "initial"
+                  // || defaultPlanValue()?.length === 0
                   )
               }
             />
