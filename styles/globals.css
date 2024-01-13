@@ -1,0 +1,59 @@
+/* import "react-toastify/dist/ReactToastify.css"; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+* {
+  animation-duration: 0s !important;
+}
+
+body {
+  /* color: rgb(var(--foreground-rgb)); */
+  background-color: #f7f7f7;
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.btn-nav {
+  @apply hover:text-primary hover:bg-primary/10 focus:bg-primary/10 active:bg-primary/10 ;
+}
+.btn-navs {
+  @apply hover:text-primary  hover:border-b-[5px] border-primary py-[5px] px-[20px]  ;
+}
+.btn-dash {
+  @apply hover:text-primary hover:ring-[1px] ring-primary/20 font-semibold;
+}
+
+.btn {
+  @apply animate-none hover:animate-none active:animate-none active:scale-100  focus:animate-none focus:scale-100 hover:scale-100 hover:transform-none active:transform-none focus:transform-none;
+}
+
+.paystack-button {
+  cursor: pointer;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  background-color: #bfbfbf;
+  font-weight: bold;
+  color: #e0eafc;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 45px;
+  margin-top: 40px;
+}
+
+
