@@ -35,7 +35,7 @@ const Testimonials = ({ shadow, testimonials }) => {
     }
   }, [control, inView]);
 
-  console.log({ testimonials });
+  // console.log({ testimonials });
 
   return (
     <div className={`bg-white`}>

@@ -21,6 +21,8 @@ const Navbar = () => {
   const [showNav, setShowNav] = useState(true);
   const [showDropdown, setShowDropdown] = useState(false);
   const [checked, setChecked] = useState(false);
+  const [showFeature, setShowFeature] = useState(false);
+  const [showFeature2, setShowFeature2] = useState(false);
 
   function handleClick() {
     setChecked(!checked);
@@ -125,20 +127,113 @@ const Navbar = () => {
 
                 {/* nav-center */}
                 <div className='navbar-center  hidden lg:flex '>
-                  <ul className='flex items-center lg:justify-between space-x-[10px]  xl:space-x-[30px] text-[16px]'>
-                    <li className=''>
+                  <ul className='flex items-center lg:justify-between space-x-[30px]  xl:space-x-50px] text-[16px]'>
+                    <li className='flex flex-col items-center group relative'>
                       <Link
                         href='/'
                         className={`${
-                          router.pathname === "/"
-                            ? "border-b-[5px] border-primary text-primary"
-                            : ""
-                        } btn-navs `}
+                          router.pathname === "/" ? "font-bold " : ""
+                        }  mb-[5px] `}
                       >
                         Home
                       </Link>
+                      <div className={` btn-navs2 `}></div>
                     </li>
-                    <li className='dropdown dropdown-hover dropdown-end group'>
+
+                    <li
+                      className='flex flex-col items-center group relative cursor-pointer'
+                      onMouseLeave={() => {
+                        setShowFeature(false);
+                      }}
+                    >
+                      <p
+                        className={` pb-[5px] peer`}
+                        onMouseEnter={() => {
+                          setShowFeature(true);
+                        }}
+                      >
+                        Features
+                      </p>
+                      <div
+                        onMouseEnter={() => {
+                          setShowFeature(true);
+                        }}
+                        className={` absolute right-0 w-[0px] peer-hover:left-0 bottom-0 peer-hover:w-full transition-all duration-200 h-[3px] bg-primary `}
+                      ></div>
+
+                      <ul
+                        // tabIndex={0}
+                        className={`${
+                          showFeature && "opacity-[1] flex translate-y-[0px]"
+                        } absolute top-[30px] opacity-0  translate-y-[50px] transition-all duration-200  bg-white  z-[1] flex-col space-y-[15px] py-[20px] shadow-xl b rounded-box w-[250px] text-[16px] px-[20px]`}
+                      >
+                        <li className='w-full'>
+                          <Link
+                            href='/#schools'
+                            className={`${
+                              router.pathname === "/#schools"
+                                ? " text-secondary"
+                                : ""
+                            }  hover:text-secondary hover:link w-full`}
+                            onClick={() => {
+                              setShowDropdown(false);
+                            }}
+                          >
+                            <p className='w-full'>For Schools</p>
+                          </Link>
+                        </li>
+
+                        <li>
+                          <Link
+                            href='/#teachers'
+                            className={`${
+                              router.pathname === "/#teachers"
+                                ? " text-secondary"
+                                : ""
+                            }  hover:text-secondary hover:link`}
+                            onClick={() => {
+                              setShowDropdown(false);
+                            }}
+                          >
+                            <p className='w-full'>For Teachers</p>
+                          </Link>
+                        </li>
+
+                        <li>
+                          <Link
+                            href='/#parents'
+                            className={`${
+                              router.pathname === "/#parents"
+                                ? " text-secondary"
+                                : ""
+                            }  hover:text-secondary hover:link`}
+                            onClick={() => {
+                              setShowDropdown(false);
+                            }}
+                          >
+                            <p className='w-full'>For Parents</p>
+                          </Link>
+                        </li>
+
+                        <li>
+                          <Link
+                            href='/#students'
+                            className={`${
+                              router.pathname === "/#students"
+                                ? " text-secondary"
+                                : ""
+                            }  hover:text-secondary hover:link`}
+                            onClick={() => {
+                              setShowDropdown(false);
+                            }}
+                          >
+                            <p className='w-full'>For Students</p>
+                          </Link>
+                        </li>
+                      </ul>
+                    </li>
+
+                    {/* <li className='dropdown dropdown-hover dropdown-end group'>
                       <label
                         tabIndex={0}
                         className='flex items-center '
@@ -171,9 +266,7 @@ const Navbar = () => {
                               <p className='w-full'>For Schools</p>
                             </Link>
                           </li>
-                          {/* <li>
-                          <a className="btn-nav">Man and Van</a>
-                        </li> */}
+                     
                           <li>
                             <Link
                               href='/#teachers'
@@ -189,9 +282,7 @@ const Navbar = () => {
                               <p className='w-full'>For Teachers</p>
                             </Link>
                           </li>
-                          {/* <li>
-                          <a className="btn-nav">Storage & Self Storage</a>
-                        </li> */}
+                        
                           <li>
                             <Link
                               href='/#parents'
@@ -208,9 +299,7 @@ const Navbar = () => {
                             </Link>
                           </li>
 
-                          {/* <li>
-                          <a className="btn-nav">Handy Man / Packing</a>
-                        </li> */}
+                        
                           <li>
                             <Link
                               href='/#students'
@@ -226,36 +315,29 @@ const Navbar = () => {
                               <p className='w-full'>For Students</p>
                             </Link>
                           </li>
-                          {/* <li>
-                          <a className="btn-nav">Moving Your Business</a>
-                        </li> */}
+                        
                         </ul>
                       )}
-                    </li>
-                    <li className=''>
+                    </li> */}
+
+                    <li className='flex flex-col items-center group relative'>
                       <Link
                         href='/pricing'
                         className={`${
-                          router.pathname === "/pricing"
-                            ? "border-b-[5px] border-primary text-primary"
-                            : ""
-                        } btn-navs`}
+                          router.pathname === "/pricing" ? "font-bold " : ""
+                        } mb-[5px] `}
                       >
                         Pricing
                       </Link>
+                      <div
+                        className={` btn-navs2 `}
+                        // className={` ${
+                        //   router.pathname === "/pricing"
+                        //     ? "btn-navs3"
+                        //     : "btn-navs2"
+                        // } `}
+                      ></div>{" "}
                     </li>
-                    {/* <li className=''>
-                      <Link
-                        href='E'
-                        className={`${
-                          router.pathname === "/locations"
-                            ? "border-b-[5px] border-primary text-primary"
-                            : ""
-                        } btn-navs`}
-                      >
-                        Support
-                      </Link>
-                    </li> */}
                   </ul>
                 </div>
 
@@ -312,7 +394,7 @@ const Navbar = () => {
                 <div className='overflow-auto scrollbar-thin scrollbar-track-gray-200/50 scrollbar-thumb-gray-500/20 scrollbar-default h-[100%]'>
                   <ul className='menu p-4 w-[250px] md:w-[400px] h-full bg-base-100 md:text-[16px] flex flex-col space-y-[10px] md:space-y-[15px]'>
                     <li className='border-b-[2px] pb-[10px]'>
-                      <Link  onClick={handleClick} href='/' className='btn-nav'>
+                      <Link onClick={handleClick} href='/' className='btn-nav'>
                         Home
                       </Link>
                     </li>
@@ -326,22 +408,38 @@ const Navbar = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link  onClick={handleClick} href='/#teachers' className='btn-nav'>
+                      <Link
+                        onClick={handleClick}
+                        href='/#teachers'
+                        className='btn-nav'
+                      >
                         Features for Teachers
                       </Link>
                     </li>
                     <li>
-                      <Link  onClick={handleClick} href='/#parents' className='btn-nav'>
+                      <Link
+                        onClick={handleClick}
+                        href='/#parents'
+                        className='btn-nav'
+                      >
                         Features for Parents
                       </Link>
                     </li>
                     <li className='border-b-[2px] pb-[10px]'>
-                      <Link  onClick={handleClick} href='/#students' className='btn-nav'>
+                      <Link
+                        onClick={handleClick}
+                        href='/#students'
+                        className='btn-nav'
+                      >
                         Features for Students
                       </Link>
                     </li>
                     <li>
-                      <Link  onClick={handleClick} href='/pricing' className='btn-nav'>
+                      <Link
+                        onClick={handleClick}
+                        href='/pricing'
+                        className='btn-nav'
+                      >
                         Pricing
                       </Link>
                     </li>

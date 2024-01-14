@@ -48,7 +48,7 @@ const Payments = () => {
     }
   }, []);
 
-  console.log({ query });
+  // console.log({ query });
 
   return (
     <>

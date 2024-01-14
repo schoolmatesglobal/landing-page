@@ -273,7 +273,7 @@ const Signup = ({ pricings }) => {
       // alert(message);
       setPayCode(transaction?.reference);
 
-      console.log({ ref, payCode });
+      // console.log({ ref, payCode });
 
       if (ref) {
         router.push({
@@ -312,9 +312,9 @@ const Signup = ({ pricings }) => {
     pricing_id: defaultPlanValue2()?.value,
   };
 
-  console.log({
-    signupBody,
-  });
+  // console.log({
+  //   signupBody,
+  // });
 
   const paymentSubmit = async () => {
     // const schlogo64 = await apiServices.signUp(schoolLogo);
@@ -335,7 +335,7 @@ const Signup = ({ pricings }) => {
         setActivateError(false);
 
         const signUp = await apiServices.signUp(signupBody);
-        console.log({ signUp });
+        // console.log({ signUp });
         // setSubmitSuccess(true);
 
         setTimeout(() => {
@@ -357,7 +357,7 @@ const Signup = ({ pricings }) => {
 
           const paymentUrl = await apiServices.postPayment(payBody);
 
-          console.log({ paymentUrl, signUp });
+          // console.log({ paymentUrl, signUp });
 
           window.location.href = paymentUrl?.url;
 
@@ -369,7 +369,7 @@ const Signup = ({ pricings }) => {
 
           // await apiServices.postPayment(payBody);
         } catch (error) {
-          console.log({ pe: error });
+          // console.log({ pe: error });
           setPaymentError(error?.response?.data?.message);
           setSubmitStatus("error5");
         }
@@ -386,7 +386,7 @@ const Signup = ({ pricings }) => {
     // setActivateError(false);
     // const paystack = new PaystackPop();
     // paystack.newTransaction({
-    //   key: "pk_test_d1566876d5c4c51d7d6c763a6103fe23a16cede0",
+    //   key: "",
     //   amount: convertStringToNumber(defaultPlanValue2()?.price) * 100,
     //   email: schoolEmail,
     //   firstname: firstName,
@@ -489,22 +489,22 @@ const Signup = ({ pricings }) => {
   //   // phoneValue,
   // });
 
-  console.log({
-    // signupBody,
-    paymentError,
-    transferCode,
-    payCode,
-    payBody,
-    paymentMode,
-    firstName,
-    query,
-    paymentPlan,
-    pricings,
-    planOptions: planOptions(),
-    defaultPlanValue: defaultPlanValue(),
-    computePlanFromId: computePlanFromId(),
-    defaultPlanValue2: defaultPlanValue2(),
-  });
+  // console.log({
+  //   // signupBody,
+  //   paymentError,
+  //   transferCode,
+  //   payCode,
+  //   payBody,
+  //   paymentMode,
+  //   firstName,
+  //   query,
+  //   paymentPlan,
+  //   pricings,
+  //   planOptions: planOptions(),
+  //   defaultPlanValue: defaultPlanValue(),
+  //   computePlanFromId: computePlanFromId(),
+  //   defaultPlanValue2: defaultPlanValue2(),
+  // });
 
   return (
     <>

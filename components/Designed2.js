@@ -46,7 +46,7 @@ const Designed2 = ({ shadow }) => {
   //     startCountUp();
   //   }
   // }, [inView]);
-  console.log({ inView, inView });
+  // console.log({ inView, inView });
 
   return (
     <div className={`bg-white`}>

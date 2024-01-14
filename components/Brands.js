@@ -36,7 +36,7 @@ const Brands = ({ shadow, trusted }) => {
     }
   }, [control, inView]);
 
-  console.log({ trusted });
+  // console.log({ trusted });
 
   return (
     <div className={`${shadow ? "bg-gray-300/10" : "bg-white"} `}>

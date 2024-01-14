@@ -37,7 +37,7 @@ export default function Home({ trusted, testimonials }) {
     window.addEventListener("scroll", handleShadow);
   }, [shadow]);
 
-  console.log({ trusted, testimonials });
+  // console.log({ trusted, testimonials });
 
   return (
     <>
@@ -75,10 +75,10 @@ export async function getServerSideProps() {
   const trustedFormatted = await apiServices.formatData(trusted);
   const testimonialsFormatted = await apiServices.formatData(testimonials);
 
-  console.log({
-    // trustedFormatted,
-    // testimonialsFormatted
-  });
+  // console.log({
+  //   // trustedFormatted,
+  //   // testimonialsFormatted
+  // });
 
   return {
     props: {

@@ -27,7 +27,7 @@ const Pricing2 = ({ pricings }) => {
     }
   }, [control, inView]);
 
-  console.log({ pricings });
+  // console.log({ pricings });
 
   return (
     <div className='bg-white'>
