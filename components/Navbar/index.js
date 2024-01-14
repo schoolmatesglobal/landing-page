@@ -15,7 +15,6 @@ import { AiOutlineMail } from "react-icons/ai";
 // import ScrollUpMenuNav from '../ScrollUpMenuNav';
 
 const Navbar = () => {
-  // const previewUrl2 = singleMoversData?.personalMoverDetails?.profilePictureUrl;
 
   const [shadow, setShadow] = useState(false);
   const [showNav, setShowNav] = useState(true);
