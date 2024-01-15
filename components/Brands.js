@@ -77,11 +77,17 @@ const Brands = ({ shadow, trusted }) => {
               {trusted?.map((tst, index) => {
                 return (
                   <SwiperSlide key={index}>
-                    <div className='' >
+                    <div className=''>
                       <img
                         src={tst?.school_logo}
                         alt={tst?.school_name}
-                        className='w-[200px] object-contain'
+                        // className='mix-blend-color-burn'
+                        style={{
+                          width: "150px",
+                          aspectRatio: "3/2",
+                          objectFit: "contain",
+                          mixBlendMode: "color-burn",
+                        }}
                       />
                     </div>
                   </SwiperSlide>
