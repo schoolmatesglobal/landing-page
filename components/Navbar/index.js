@@ -15,7 +15,6 @@ import { AiOutlineMail } from "react-icons/ai";
 // import ScrollUpMenuNav from '../ScrollUpMenuNav';
 
 const Navbar = () => {
-
   const [shadow, setShadow] = useState(false);
   const [showNav, setShowNav] = useState(true);
   const [showDropdown, setShowDropdown] = useState(false);
@@ -163,8 +162,10 @@ const Navbar = () => {
                       <ul
                         // tabIndex={0}
                         className={`${
-                          showFeature && "opacity-[1] flex translate-y-[0px]"
-                        } absolute top-[30px] opacity-0  translate-y-[50px] transition-all duration-200  bg-white  z-[1] flex-col space-y-[15px] py-[20px] shadow-xl b rounded-box w-[250px] text-[16px] px-[20px]`}
+                          showFeature
+                            ? "absolute top-[30px] opacity-[1] translate-y-[0px] transition-all duration-200  bg-white  z-[1] flex flex-col space-y-[15px] py-[20px] shadow-xl b rounded-box w-[250px] text-[16px] px-[20px]"
+                            : "absolute top-[30px] opacity-0  translate-y-[50px] transition-all duration-200  bg-white  z-[1] flex flex-col space-y-[15px] py-[20px] shadow-xl b rounded-box w-[250px] text-[16px] px-[20px]"
+                        } `}
                       >
                         <li className='w-full'>
                           <Link

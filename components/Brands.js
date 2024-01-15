@@ -76,8 +76,8 @@ const Brands = ({ shadow, trusted }) => {
             >
               {trusted?.map((tst, index) => {
                 return (
-                  <SwiperSlide>
-                    <div className='' key={index}>
+                  <SwiperSlide key={index}>
+                    <div className='' >
                       <img
                         src={tst?.school_logo}
                         alt={tst?.school_name}

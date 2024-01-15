@@ -75,9 +75,9 @@ const Testimonials = ({ shadow, testimonials }) => {
             >
               {testimonials?.map((test, index) => {
                 return (
-                  <SwiperSlide>
+                  <SwiperSlide key={index}>
                     <div
-                      key={index}
+                      
                       className='w-full flex flex-col items-center md:flex-row px-[20px]'
                     >
                       <img
