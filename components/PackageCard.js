@@ -197,8 +197,7 @@ const PackageCard = ({
                 <MdCancel className={`text-[24px]`} />
               </li>
             )}
-
-            {/* {f10 ? (
+            {f10 ? (
               <li className='border-b py-[8px] flex items-center'>
                 <FiCheckCircle
                   className={` text-secondary text-[18px] shrink-0`}
@@ -209,7 +208,31 @@ const PackageCard = ({
               <li className='border-b py-[8px] flex justify-center items-center'>
                 <MdCancel className={`text-[24px]`} />
               </li>
-            )} */}
+            )}
+            {f11 ? (
+              <li className='border-b py-[8px] flex items-center'>
+                <FiCheckCircle
+                  className={` text-secondary text-[18px] shrink-0`}
+                />
+                <p className='px-[10px]'>{f11}</p>
+              </li>
+            ) : (
+              <li className='border-b py-[8px] flex justify-center items-center'>
+                <MdCancel className={`text-[24px]`} />
+              </li>
+            )}
+            {f12 ? (
+              <li className='border-b py-[8px] flex items-center'>
+                <FiCheckCircle
+                  className={` text-secondary text-[18px] shrink-0`}
+                />
+                <p className='px-[10px]'>{f12}</p>
+              </li>
+            ) : (
+              <li className='border-b py-[8px] flex justify-center items-center'>
+                <MdCancel className={`text-[24px]`} />
+              </li>
+            )}
           </ul>
         </div>
       </div>

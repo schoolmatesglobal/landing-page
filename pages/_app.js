@@ -14,7 +14,9 @@ import Router from "next/router";
 const queryClient = new QueryClient();
 
 Router.events.on("routeChangeStart", nProgress.start);
+
 Router.events.on("routeChangeError", nProgress.done);
+
 Router.events.on("routeChangeComplete", nProgress.done);
 
 export default function App({ Component, pageProps }) {

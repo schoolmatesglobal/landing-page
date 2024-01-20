@@ -80,6 +80,9 @@ const Pricing2 = ({ pricings }) => {
                     f7={pr?.features[6]?.name}
                     f8={pr?.features[7]?.name}
                     f9={pr?.features[8]?.name}
+                    f10={pr?.features[9]?.name}
+                    f11={pr?.features[10]?.name}
+                    f12={pr?.features[11]?.name}
                     link={btnLink}
                     type={pr?.type}
                     features={pr?.features}

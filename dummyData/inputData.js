@@ -23,6 +23,7 @@ export const roleOptions = [
   { value: "Teacher", label: "Teacher" },
   { value: "Others", label: "Others" },
 ];
+
 export const paymentPlan = [
   // { value: "Select", label: "Select" },
   { value: "School Owner", label: "School Owner", id: "1" },
@@ -32,6 +33,7 @@ export const paymentPlan = [
   { value: "Teacher", label: "Teacher" },
   { value: "Others", label: "Others" },
 ];
+
 export const serviceOptions2 = [
   { value: "Select", label: "Select" },
   { value: "1 Bed property", label: "1 Bed property" },

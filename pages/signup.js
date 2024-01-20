@@ -80,7 +80,7 @@ const Signup = ({ pricings }) => {
   const [transferCode, setTransferCode] = useState("");
   const [paymentError, setPaymentError] = useState("");
 
-  const publicKey = "pk_test_d1566876d5c4c51d7d6c763a6103fe23a16cede0";
+  // const publicKey = "pk_test_d1566876d5c4c51d7d6c763a6103fe23a16cede0";
 
   const defaultPhoneValue = () => {
     const option = countries2.filter((opt) => opt.value == "Nigeria (+234)");
@@ -265,7 +265,7 @@ const Signup = ({ pricings }) => {
       name: `${firstName} ${lastName}`,
       phone,
     },
-    publicKey,
+    // publicKey,
     text: "Pay Now",
     onSuccess: (transaction) => {
       let message = `Payment was successful. Reference - ${transaction?.reference}`;
