@@ -1,3 +1,18 @@
+export function findMaxFeaturesLength(plans) {
+  let maxFeaturesLength = 0;
+
+  plans.forEach(plan => {
+    const currentFeaturesLength = plan.features.length;
+
+    if (currentFeaturesLength > maxFeaturesLength) {
+      maxFeaturesLength = currentFeaturesLength;
+    }
+  });
+
+  return maxFeaturesLength;
+}
+
+
 export function convertStringToNumber(amountString) {
   // Remove commas from the string
   const cleanedString = amountString?.replace(/,/g, '');

@@ -16,11 +16,13 @@ import PackageCard from "@/components/PackageCard";
 import Pricing2 from "@/components/Pricing";
 import PricingHero from "@/components/PricingHero";
 import APIServices from "@/utils/api-services";
+import { findMaxFeaturesLength } from "@/utils/logics";
 
-const Pricing = ({pricings}) => {
+const Pricing = ({ pricings }) => {
 
+  const maxFeatures = findMaxFeaturesLength(pricings);
 
-  
+  console.log({ pricings, maxFeatures });
 
   return (
     <>
@@ -40,7 +42,7 @@ const Pricing = ({pricings}) => {
           {/* <Hero /> */}
           {/* <BrandsPricing /> */}
           <PricingHero />
-          <Pricing2 pricings={pricings}/>
+          <Pricing2 pricings={pricings} maxFeatures={maxFeatures} />
 
           {/* move packages */}
 
@@ -56,8 +58,6 @@ const Pricing = ({pricings}) => {
 };
 
 export default Pricing;
-
-
 
 export async function getServerSideProps() {
   // const emails = await fetchWelcomedEmails();

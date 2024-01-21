@@ -11,7 +11,7 @@ import {
 } from "../variants";
 import { formatAsCurrency, formatPrice } from "@/utils/logics";
 
-const Pricing2 = ({ pricings }) => {
+const Pricing2 = ({ pricings, maxFeatures }) => {
   const whatsappNumber = "+2347033430934";
 
   // WhatsApp URL with the phone number
@@ -83,9 +83,11 @@ const Pricing2 = ({ pricings }) => {
                     f10={pr?.features[9]?.name}
                     f11={pr?.features[10]?.name}
                     f12={pr?.features[11]?.name}
+                    f13={pr?.features[12]?.name}
                     link={btnLink}
                     type={pr?.type}
                     features={pr?.features}
+                    maxFeatures={maxFeatures}
                   />
                 </div>
               );

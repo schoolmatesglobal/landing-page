@@ -35,8 +35,14 @@ const PackageCard = ({
   link,
   preferred,
   type,
+  maxFeatures,
+  features,
 }) => {
   const [submitLoading, setSubmitLoading] = useState(false);
+
+  const featureDiff = maxFeatures - features?.length;
+
+  console.log({ features, maxFeatures, featureDiff });
 
   return (
     <div
@@ -81,20 +87,40 @@ const PackageCard = ({
           </Link>
 
           <ul className='text-gray-500 mt-[20px] md:mt-[20px] text-start text-[15px] w-full'>
-            {f1 ? (
-              <li className='border-b py-[8px] flex items-center'>
-                <FiCheckCircle
-                  className={` text-secondary text-[18px] shrink-0`}
-                />
-                <p className='px-[10px]'>{f1}</p>
-              </li>
-            ) : (
-              <li className='border-b py-[8px] flex justify-center items-center'>
-                <MdCancel className={`text-[24px]`} />
-              </li>
-            )}
+            {features?.map((ft, index) => {
+              // const highestFeatureLength = features?.length
 
-            {f2 ? (
+              return (
+                <div key={index} className=''>
+                  {ft ? (
+                    <li className='border-b py-[8px] flex items-center'>
+                      <FiCheckCircle
+                        className={` text-secondary text-[18px] shrink-0`}
+                      />
+                      <p className='px-[10px]'>{ft?.name}</p>
+                    </li>
+                  ) : (
+                    <li className='border-b py-[8px] flex justify-center items-center'>
+                      <MdCancel className={`text-[24px]`} />
+                    </li>
+                  )}
+                </div>
+              );
+            })}
+
+            {Array.from({ length: featureDiff }, (_, index) => {
+              // Your mapping operation here
+              return (
+                <li
+                  index={index}
+                  className='hidden border-b py-[8px] md:flex justify-center items-center'
+                >
+                  <MdCancel className={`text-[24px]`} />
+                </li>
+              ); // Replace this with your actual mapping logic
+            })}
+
+            {/* {f2 ? (
               <li className='border-b py-[8px] flex items-center'>
                 <FiCheckCircle
                   className={` text-secondary text-[18px] shrink-0`}
@@ -197,6 +223,7 @@ const PackageCard = ({
                 <MdCancel className={`text-[24px]`} />
               </li>
             )}
+
             {f10 ? (
               <li className='border-b py-[8px] flex items-center'>
                 <FiCheckCircle
@@ -232,7 +259,7 @@ const PackageCard = ({
               <li className='border-b py-[8px] flex justify-center items-center'>
                 <MdCancel className={`text-[24px]`} />
               </li>
-            )}
+            )} */}
           </ul>
         </div>
       </div>
