@@ -42,11 +42,11 @@ const PackageCard = ({
 
   const featureDiff = maxFeatures - features?.length;
 
-  console.log({ features, maxFeatures, featureDiff });
+  // console.log({ features, maxFeatures, featureDiff });
 
   return (
     <div
-      className={`card min-w-[250px] min-h-[800px] mb-[0px] pb-[30px]  bg-primary/5 flex flex-col  items-center text-primary  bg-base-100 shadow-md hover:shadow-lg hover:scale-[1.01] duration-200 px-[20px] md:px-[10px]`}
+      className={`card min-w-[250px] md:min-h-[800px] mb-[0px] pb-[30px]  bg-primary/5 flex flex-col  items-center text-primary  bg-base-100 shadow-md hover:shadow-lg hover:scale-[1.01] duration-200 px-[20px] md:px-[10px]`}
     >
       {/* title */}
       <h2 className='card-title justify-center  py-[0px] mt-[20px] mb-[10px]'>
@@ -119,147 +119,6 @@ const PackageCard = ({
                 </li>
               ); // Replace this with your actual mapping logic
             })}
-
-            {/* {f2 ? (
-              <li className='border-b py-[8px] flex items-center'>
-                <FiCheckCircle
-                  className={` text-secondary text-[18px] shrink-0`}
-                />
-                <p className='px-[10px]'>{f2}</p>
-              </li>
-            ) : (
-              <li className='border-b py-[8px] flex justify-center items-center'>
-                <MdCancel className={`text-[24px]`} />
-              </li>
-            )}
-
-            {f3 ? (
-              <li className='border-b py-[8px] flex items-center'>
-                <FiCheckCircle
-                  className={` text-secondary text-[18px] shrink-0`}
-                />
-                <p className='px-[10px]'>{f3}</p>
-              </li>
-            ) : (
-              <li className='border-b py-[8px] flex justify-center items-center'>
-                <MdCancel className={`text-[24px]`} />
-              </li>
-            )}
-
-            {f4 ? (
-              <li className='border-b py-[8px] flex items-center'>
-                <FiCheckCircle
-                  className={` text-secondary text-[18px] shrink-0`}
-                />
-                <p className='px-[10px]'>{f4}</p>
-              </li>
-            ) : (
-              <li className='border-b py-[8px] flex justify-center items-center'>
-                <MdCancel className={`text-[24px]`} />
-              </li>
-            )}
-
-            {f5 ? (
-              <li className='border-b py-[8px] flex items-center'>
-                <FiCheckCircle
-                  className={` text-secondary text-[18px] shrink-0`}
-                />
-                <p className='px-[10px]'>{f5}</p>
-              </li>
-            ) : (
-              <li className='border-b py-[8px] flex justify-center items-center'>
-                <MdCancel className={`text-[24px]`} />
-              </li>
-            )}
-
-            {f6 ? (
-              <li className='border-b py-[8px] flex items-center'>
-                <FiCheckCircle
-                  className={` text-secondary text-[18px] shrink-0`}
-                />
-                <p className='px-[10px]'>{f6}</p>
-              </li>
-            ) : (
-              <li className='border-b py-[8px] flex justify-center items-center'>
-                <MdCancel className={`text-[24px]`} />
-              </li>
-            )}
-
-            {f7 ? (
-              <li className='border-b py-[8px] flex items-center'>
-                <FiCheckCircle
-                  className={` text-secondary text-[18px] shrink-0`}
-                />
-                <p className='px-[10px]'>{f7}</p>
-              </li>
-            ) : (
-              <li className='border-b py-[8px] flex justify-center items-center'>
-                <MdCancel className={`text-[24px]`} />
-              </li>
-            )}
-
-            {f8 ? (
-              <li className='border-b py-[8px] flex items-center'>
-                <FiCheckCircle
-                  className={` text-secondary text-[18px] shrink-0`}
-                />
-                <p className='px-[10px]'>{f8}</p>
-              </li>
-            ) : (
-              <li className='border-b py-[8px] flex justify-center items-center'>
-                <MdCancel className={`text-[24px]`} />
-              </li>
-            )}
-
-            {f9 ? (
-              <li className='border-b py-[8px] flex items-center'>
-                <FiCheckCircle
-                  className={` text-secondary text-[18px] shrink-0`}
-                />
-                <p className='px-[10px]'>{f9}</p>
-              </li>
-            ) : (
-              <li className='border-b py-[8px] flex justify-center items-center'>
-                <MdCancel className={`text-[24px]`} />
-              </li>
-            )}
-
-            {f10 ? (
-              <li className='border-b py-[8px] flex items-center'>
-                <FiCheckCircle
-                  className={` text-secondary text-[18px] shrink-0`}
-                />
-                <p className='px-[10px]'>{f10}</p>
-              </li>
-            ) : (
-              <li className='border-b py-[8px] flex justify-center items-center'>
-                <MdCancel className={`text-[24px]`} />
-              </li>
-            )}
-            {f11 ? (
-              <li className='border-b py-[8px] flex items-center'>
-                <FiCheckCircle
-                  className={` text-secondary text-[18px] shrink-0`}
-                />
-                <p className='px-[10px]'>{f11}</p>
-              </li>
-            ) : (
-              <li className='border-b py-[8px] flex justify-center items-center'>
-                <MdCancel className={`text-[24px]`} />
-              </li>
-            )}
-            {f12 ? (
-              <li className='border-b py-[8px] flex items-center'>
-                <FiCheckCircle
-                  className={` text-secondary text-[18px] shrink-0`}
-                />
-                <p className='px-[10px]'>{f12}</p>
-              </li>
-            ) : (
-              <li className='border-b py-[8px] flex justify-center items-center'>
-                <MdCancel className={`text-[24px]`} />
-              </li>
-            )} */}
           </ul>
         </div>
       </div>
