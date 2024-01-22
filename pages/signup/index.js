@@ -671,20 +671,21 @@ const Signup = ({ pricings }) => {
             />
           )}
 
-          {query?.status === "success" && (
+          {/* {query?.status === "success" && (
             <Success
               submitStatus={submitStatus}
               redirect={redirect}
               handleComplete={handleComplete}
             />
-          )}
-          {query?.status === "error" && (
+          )} */}
+
+          {/* {query?.status === "error" && (
             <Error
               submitStatus={submitStatus}
               redirect={redirect}
               handleError={handleError}
             />
-          )}
+          )} */}
         </div>
       </div>
     </>

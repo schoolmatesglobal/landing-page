@@ -12,7 +12,7 @@ const Success = ({ submitStatus, redirect, handleComplete }) => {
       </div>
 
       <div className='w-full flex flex-col items-center'>
-        <h1 className='text-[16px] font-medium '>Thanks for Registering</h1>
+        <h1 className='text-[16px] font-medium '>Registration is completed</h1>
         <p className='mt-2 text-2xl md:text-4xl font-extrabold tracking-tight text-primary sm:text-5xl'>
           Payment successful
         </p>
@@ -45,7 +45,10 @@ const Success = ({ submitStatus, redirect, handleComplete }) => {
           className='btn btn-secondary btn-wide'
         >
           {/* Return to Dashboard */}
-          {<span className=''>Complete Signup</span>}
+          {submitStatus !== "loading" && <span className=''>Go to Dashboard</span>}
+          {submitStatus === "loading" && (
+            <span className='loading loading-spinner loading-md text-white'></span>
+          )}
         </div>
       </div>
     </>

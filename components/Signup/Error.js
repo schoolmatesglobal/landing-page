@@ -46,7 +46,10 @@ const Error = ({ submitStatus, redirect, handleError }) => {
           className='btn btn-secondary btn-wide'
         >
           {/* Return to Dashboard */}
-          {<span className=''>Try Again</span>}
+          {submitStatus !== "loading" &&<span className=''>Try Again</span>}
+          {submitStatus === "loading" && (
+            <span className='loading loading-spinner loading-md text-white'></span>
+          )}
         </div>
       </div>
     </>

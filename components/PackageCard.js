@@ -53,7 +53,7 @@ const PackageCard = ({
         {title}
       </h2>
 
-      <p className='font-medium text-[15px] h-[100px] md:h-[130px] text-center text-gray-500 pt-[0px]'>
+      <p className='font-medium text-[15px] md:h-[150px] text-center text-gray-500 pt-[0px]'>
         {subTitle}
       </p>
 
