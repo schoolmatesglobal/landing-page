@@ -171,6 +171,7 @@ const AboutYou = ({
                 defaultCountry='NG'
                 onChange={setPhone}
                 value={phone}
+                className='w-full'
               />
             </div>
             {!phoneError && (
