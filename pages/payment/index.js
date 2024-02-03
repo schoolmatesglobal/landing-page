@@ -24,7 +24,7 @@ const Payments = () => {
     }, 2000);
 
     setTimeout(() => {
-      router.push("https://schoolmatesdemo.vercel.app/auth");
+      router.push("https://portal.schoolmateglobal.com");
     }, 5000);
   }
 

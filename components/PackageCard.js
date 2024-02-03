@@ -97,7 +97,9 @@ const PackageCard = ({
                       <FiCheckCircle
                         className={` text-secondary text-[18px] shrink-0`}
                       />
-                      <p className='px-[10px]'>{ft?.name}</p>
+                      <p className='px-[10px] line-clamp-1 text-[15px]'>
+                        {ft?.name}
+                      </p>
                     </li>
                   ) : (
                     <li className='border-b py-[8px] flex justify-center items-center'>
