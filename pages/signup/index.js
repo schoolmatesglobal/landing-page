@@ -248,7 +248,8 @@ const Signup = ({ pricings }) => {
   };
 
   // const redirectUrl = "http://localhost:3000/signup?status=success";
-  const redirectUrl = "https://schmates.vercel.app/signup?status=success";
+  const redirectUrl = "https://schmates.vercel.app/signup/success";
+  // const redirectUrl = "https://schmates.vercel.app/signup?status=success";
 
   const payBody = {
     school_name: schoolName,
