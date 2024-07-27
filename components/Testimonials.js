@@ -76,15 +76,19 @@ const Testimonials = ({ shadow, testimonials }) => {
               {testimonials?.map((test, index) => {
                 return (
                   <SwiperSlide key={index}>
-                    <div
-                      
-                      className='w-full flex flex-col items-center md:flex-row px-[20px]'
-                    >
-                      <img
+                    <div className='w-full flex flex-col items-center md:flex-row px-[20px]'>
+                      {/* <img
                         src={test?.image}
                         alt=''
                         className='w-[200px] h-[200px] mb-[-20px] md:mb-0 md:mr-[-20px] border-[4px] border-secondary object-cover rounded-full'
-                      />
+                      /> */}
+                      <div className='relative w-[200px] h-[200px] mb-[-20px] md:mb-0 md:mr-[-20px] border-[4px] border-secondary rounded-full overflow-hidden'>
+                        <img
+                          src={test?.image}
+                          alt=''
+                          className='w-full h-full object-cover'
+                        />
+                      </div>
                       <div className='min-h-[300px]  bg-gray-300/20 rounded-[50px] px-[50px] py-[50px] flex flex-col text-center md:text-start  justify-center'>
                         <p className='italic md:text-[18px] mb-[30px]'>
                           {test?.description}
