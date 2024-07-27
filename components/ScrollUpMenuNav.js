@@ -45,7 +45,7 @@ const ScrollUpMenuNav = () => {
             ? "bottom-[80px] cursor-pointer"
             : "bottom-[20px] cursor-pointer"
         } tooltip tooltip-right tooltip-[#f5f5f5] cursor-pointer lg:flex  mb-[0px] fixed flex-col z-[60] left-[20px]  md:left-0  xs:ml-[20px] md:ml-[40px] duration-300`}
-        data-tip='Need help? Chat with us'
+        data-tip='Chat with us on Whatsapp'
       >
         <a
           href={whatsappUrl}
