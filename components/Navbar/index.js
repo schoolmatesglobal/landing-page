@@ -64,43 +64,6 @@ const Navbar = () => {
             : "fixed left-0 right-0 top-0 z-50 "
         } flex flex-col items-center  `}
       >
-        {/* Top Nav */}
-        {/* {showNav && (
-          <div className='bg-primary w-full'>
-            <div className='flex lg:flex-row flex-col w-full md:max-w-7xl mx-auto px-[0px] items-center  py-[10px] h-[40px] text-white lg:justify-between text-[12px]'>
-              <div className='flex  items-center'>
-                <div className='flex'>
-                  <p className='hidden'>Need help?</p>
-                  <div className=' md:items-center ml-[10px] space-x-[7px] hidden md:flex'>
-                    <RiCustomerService2Fill size={20} className='' />
-                    <a href='tel:07869116203' className='link link-hover'>
-                      07869116203{" "}
-                    </a>
-                    <p className=''>|</p>
-                  </div>
-                </div>
-
-                <div className='flex items-center ml-[10px] space-x-[7px]'>
-                  <BiSolidPhoneCall size={20} className='' />
-                  <a href='tel:(800)-995-5003' className='link link-hover'>
-                    (800) 995-5003{" "}
-                  </a>
-                </div>
-              </div>
-              <div className='lg:flex items-center  space-x-[10px] hidden pr-[10px]'>
-                <div className=''>
-                  <AiOutlineMail size={20} className='' />
-                </div>
-                <a
-                  href='mailto:removalsandselfstorage@gmail.com?subject=Enquiry'
-                  className='link link-hover'
-                >
-                  info@schoolmates.com
-                </a>
-              </div>
-            </div>
-          </div>
-        )} */}
         {/* Main Nav */}
         <div
           className={`${
@@ -113,7 +76,7 @@ const Navbar = () => {
               {/* Navbar */}
               <div className='w-full navbar h-[30px] md:max-w-7xl mx-auto items-center '>
                 {/* nav-start */}
-                <div className='navbar-start  flex  items-center'>
+                <div className='navbar-start lg:w-[35%]  flex  items-center'>
                   <Link href='/'>
                     <img
                       src='/schoolmates_logo.png'
@@ -124,7 +87,7 @@ const Navbar = () => {
                 </div>
 
                 {/* nav-center */}
-                <div className='navbar-center  hidden lg:flex '>
+                <div className='navbar-center lg:w-[30%]  hidden lg:flex lg:justify-center '>
                   <ul className='flex items-center lg:justify-between space-x-[30px]  xl:space-x-50px] text-[16px]'>
                     <li className='flex flex-col items-center group relative'>
                       <Link
@@ -342,7 +305,7 @@ const Navbar = () => {
                 </div>
 
                 {/* nav right */}
-                <div className='navbar-end  lg:w-[40%] flex  space-x-[10px]'>
+                <div className='navbar-end  lg:w-[35%] flex  space-x-[10px]'>
                   <div className=' lg:space-x-[10px] hidden lg:flex'>
                     <Link
                       href='/pricing#price'
@@ -441,6 +404,24 @@ const Navbar = () => {
                         className='btn-nav'
                       >
                         Pricing
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        onClick={handleClick}
+                        href='/privacy-policy'
+                        className='btn-nav'
+                      >
+                        Privacy Policy
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        onClick={handleClick}
+                        href='/terms-of-use'
+                        className='btn-nav'
+                      >
+                        Terms of Use
                       </Link>
                     </li>
                   </ul>

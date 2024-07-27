@@ -73,11 +73,12 @@ export async function getServerSideProps() {
   const trustedFormatted = await apiServices.formatData(trusted);
   const testimonialsFormatted = await apiServices.formatData(testimonials);
 
-  
   return {
     props: {
       trusted: trustedFormatted || [],
+      // trusted: [],
       testimonials: testimonialsFormatted || [],
+      // testimonials: [],
     },
   };
 }

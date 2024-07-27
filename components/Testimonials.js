@@ -18,6 +18,8 @@ import {
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import Image from "next/image";
+import { dummyTestimonials } from "@/dummyData/homedatas";
 
 const Testimonials = ({ shadow, testimonials }) => {
   const isLarge = useMediaQuery({ query: "(min-width: 1300px)" });
@@ -73,7 +75,8 @@ const Testimonials = ({ shadow, testimonials }) => {
               navigation={true}
               className='w-full py-[20px]'
             >
-              {testimonials?.map((test, index) => {
+              {/* {testimonials?.map((test, index) => { */}
+              {dummyTestimonials?.map((test, index) => {
                 return (
                   <SwiperSlide key={index}>
                     <div className='w-full flex flex-col items-center md:flex-row px-[20px]'>
@@ -82,14 +85,16 @@ const Testimonials = ({ shadow, testimonials }) => {
                         alt=''
                         className='w-[200px] h-[200px] mb-[-20px] md:mb-0 md:mr-[-20px] border-[4px] border-secondary object-cover rounded-full'
                       /> */}
-                      <div className='relative w-[200px] h-[200px] mb-[-20px] md:mb-0 md:mr-[-20px] border-[4px] border-secondary rounded-full overflow-hidden'>
-                        <img
+                      <div className='relative w-[200px] h-[200px] mb-[-40px] md:mb-0 md:mr-[-20px] border-[4px] border-secondary rounded-full overflow-hidden'>
+                        <Image
+                          height={200}
+                          width={200}
                           src={test?.image}
-                          alt=''
-                          className='w-full h-full object-cover'
+                          alt='parents'
+                          className=' object-cover w-[200px] h-[200px] rounded-full'
                         />
                       </div>
-                      <div className='min-h-[300px]  bg-gray-300/20 rounded-[50px] px-[50px] py-[50px] flex flex-col text-center md:text-start  justify-center'>
+                      <div className='min-h-[300px]  bg-gray-300/20 rounded-[50px] px-[50px] py-[50px] flex flex-col text-center md:text-start  justify-center md:flex-[1]'>
                         <p className='italic md:text-[18px] mb-[30px]'>
                           {test?.description}
                         </p>

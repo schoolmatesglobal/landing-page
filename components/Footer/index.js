@@ -41,28 +41,16 @@ const Footer = () => {
         {/* column 2 */}
         <div>
           <span className='footer-title'>Features</span>
-          <Link
-            href='/#schools'
-            className={` link link-hover`}
-          >
+          <Link href='/#schools' className={` link link-hover`}>
             <p className='w-full'>For Schools</p>
           </Link>
-          <Link
-            href='/#teachers'
-            className={` link link-hover my-[5px]`}
-          >
+          <Link href='/#teachers' className={` link link-hover my-[5px]`}>
             <p className='w-full'>For Teachers</p>
           </Link>
-          <Link
-            href='/#parents'
-            className={` link link-hover `}
-          >
+          <Link href='/#parents' className={` link link-hover `}>
             <p className='w-full'>For Parents</p>
           </Link>
-          <Link
-            href='/#students'
-            className={` link link-hover my-[5px]`}
-          >
+          <Link href='/#students' className={` link link-hover my-[5px]`}>
             <p className='w-full'>For Students</p>
           </Link>
           {/* <a className='link link-hover my-[5px]'>Pricing</a>
@@ -72,26 +60,16 @@ const Footer = () => {
 
         {/* column 3 */}
         <div>
-          <span className='footer-title'>Product</span>
-          <Link
-            href='/pricing'
-            className={` link link-hover `}
-          >
+          <span className='footer-title'>Company</span>
+          <Link href='/pricing' className={` link link-hover `}>
             <p className='w-full'>Pricing</p>
           </Link>
-          <Link
-            href='#'
-            className={` link link-hover my-[5px]`}
-          >
+          <Link href='/privacy-policy' className={` link link-hover my-[5px]`}>
             <p className='w-full'>Privacy Policy</p>
           </Link>
-          <Link
-            href='#'
-            className={` link link-hover `}
-          >
+          <Link href='/terms-of-use' className={` link link-hover `}>
             <p className='w-full'>Terms of Use</p>
           </Link>
-          
         </div>
 
         {/* column 4 */}

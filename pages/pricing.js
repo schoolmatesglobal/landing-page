@@ -1,22 +1,9 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import Head from "next/head";
-import NormalLayout from "@/layouts/NormalLayout";
-import Hero from "@/components/Hero";
-import Brands from "@/components/Brands";
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import WhySection from "@/components/WhySection";
-import Brands2 from "@/components/Brands2";
-import Testimonials from "@/components/Testimonials";
-import TalkToUs from "@/components/TalkToUs";
-import Designed from "@/components/Designed";
-import BrandsPricing from "@/components/BrandsPricing";
-import PackageCard from "@/components/PackageCard";
 import Pricing2 from "@/components/Pricing";
 import PricingHero from "@/components/PricingHero";
+import NormalLayout from "@/layouts/NormalLayout";
 import APIServices from "@/utils/api-services";
 import { findMaxFeaturesLength } from "@/utils/logics";
+import Head from "next/head";
 
 const Pricing = ({ pricings }) => {
 
