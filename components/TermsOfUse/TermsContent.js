@@ -19,10 +19,10 @@ const TermsContent = () => {
           </p>
         </div>
         <p className='text-[16px] text-justify lg:text-[17px] mb-[10px] mt-[0px]'>
-          {`These Terms and Conditions (“Terms”) govern your access to and use of the Schoolmates platform, including its website, web application, and mobile applications for teachers and parents (collectively, “Applications”). By accessing or using the Platform, you agree to be bound by these Terms. If you do not agree to all of the Terms, you are not authorized to use the Platform.`}
+          {`These Terms and Conditions (“Terms”) govern your access to and use of the SchoolMates platform, including its website, web application, and mobile applications for teachers and parents (collectively, “Applications”). By accessing or using the Platform, you agree to be bound by these Terms. If you do not agree to all of the Terms, you are not authorized to use the Platform.`}
         </p>
         <p className='text-[16px] text-justify lg:text-[17px] mb-[10px] mt-[0px]'>
-          {`By accessing or using Schoolmates, you acknowledge that you have read, understood, and agree to be bound by these Terms.`}
+          {`By accessing or using SchoolMates, you acknowledge that you have read, understood, and agree to be bound by these Terms.`}
         </p>
       </div>
 
@@ -41,7 +41,7 @@ const TermsContent = () => {
           <p className='font-bold'>2.1</p>
           <p className='text-[16px] lg:text-[17px] text-justify mb-[10px]'>
             <span className='font-bold'>Platform:</span> Refers to the
-            Schoolmates website, web application, and mobile applications for
+            SchoolMates website, web application, and mobile applications for
             teachers and parents.
           </p>
         </div>
@@ -58,14 +58,14 @@ const TermsContent = () => {
             <p className='font-bold'>2.2.1</p>
             <p className='text-[16px] lg:text-[17px] text-justify mb-[10px]'>
               <span className='font-bold'>School Owner:</span> The entity
-              subscribing to Schoolmates on behalf of the school.
+              subscribing to SchoolMates on behalf of the school.
             </p>
           </div>
           <div className='flex space-x-[10px] pl-[40px]'>
             <p className='font-bold'>2.2.2</p>
             <p className='text-[16px] lg:text-[17px] text-justify mb-[10px]'>
               <span className='font-bold'>School Administrator:</span> An
-              individual authorized by the School Owner to manage Schoolmates
+              individual authorized by the School Owner to manage SchoolMates
               within the school.
             </p>
           </div>
@@ -73,7 +73,7 @@ const TermsContent = () => {
             <p className='font-bold'>2.2.3</p>
             <p className='text-[16px] lg:text-[17px] text-justify mb-[10px]'>
               <span className='font-bold'>Teacher:</span> An individual
-              authorized by the School Administrator to utilize Schoolmates to
+              authorized by the School Administrator to utilize SchoolMates to
               manage their class activities.
             </p>
           </div>
@@ -82,7 +82,7 @@ const TermsContent = () => {
             <p className='text-[16px] lg:text-[17px] text-justify mb-[10px]'>
               <span className='font-bold'>Parent:</span> An individual
               authorized by the School Administrator to access their child’s
-              information and school activities through Schoolmates.
+              information and school activities through SchoolMates.
             </p>
           </div>
           <div className='flex space-x-[10px] pl-[40px]'>
@@ -90,7 +90,7 @@ const TermsContent = () => {
             <p className='text-[16px] lg:text-[17px] text-justify mb-[10px]'>
               <span className='font-bold'>Student:</span> An individual
               authorized by the School Administrator to access specific features
-              of Schoolmates for taking exams, assignments, and other learning
+              of SchoolMates for taking exams, assignments, and other learning
               activities under the supervision of Teachers and Parents.
             </p>
           </div>
@@ -154,7 +154,7 @@ const TermsContent = () => {
           <div className='flex space-x-[10px] pl-[40px]'>
             <p className='font-bold'>3.2.1</p>
             <p className='text-[16px] lg:text-[17px] text-justify mb-[10px]'>
-              School Owners create an account to subscribe to Schoolmates.
+              School Owners create an account to subscribe to SchoolMates.
             </p>
           </div>
           <div className='flex space-x-[10px] pl-[40px]'>
@@ -184,7 +184,7 @@ const TermsContent = () => {
           <div className='flex space-x-[10px] pl-[40px]'>
             <p className='font-bold'>3.2.5</p>
             <p className='text-[16px] lg:text-[17px] text-justify mb-[10px]'>
-              Users are to notify their school or Schoolmates immediately of any
+              Users are to notify their school or SchoolMates immediately of any
               unauthorized use of their account or any other breach of security.
             </p>
           </div>
@@ -263,8 +263,8 @@ const TermsContent = () => {
           <div className='flex space-x-[10px] pl-[40px]'>
             <p className='font-bold'>4.2.1</p>
             <p className='text-[16px] lg:text-[17px] text-justify mb-[10px]'>
-              Schoolmates claims no ownership rights over your Content, but you
-              grant Schoolmates a non-exclusive, royalty-free license to use,
+              SchoolMates claims no ownership rights over your Content, but you
+              grant SchoolMates a non-exclusive, royalty-free license to use,
               reproduce, modify, publish, distribute, and translate your Content
               solely for the purpose of providing and improving the Platform.
             </p>
@@ -286,14 +286,14 @@ const TermsContent = () => {
           <div className='flex space-x-[10px] pl-[40px]'>
             <p className='font-bold'>4.3.1</p>
             <p className='text-[16px] lg:text-[17px] text-justify mb-[10px]'>
-              Use Schoolmates for any unlawful purpose or in any way that
+              Use SchoolMates for any unlawful purpose or in any way that
               violates these Terms.
             </p>
           </div>
           <div className='flex space-x-[10px] pl-[40px]'>
             <p className='font-bold'>4.3.2</p>
             <p className='text-[16px] lg:text-[17px] text-justify mb-[10px]'>
-              Use Schoolmates to impersonate any person or entity, or to falsely
+              Use SchoolMates to impersonate any person or entity, or to falsely
               state or otherwise misrepresent your affiliation with any person
               or entity.
             </p>
@@ -301,14 +301,14 @@ const TermsContent = () => {
           <div className='flex space-x-[10px] pl-[40px]'>
             <p className='font-bold'>4.3.3</p>
             <p className='text-[16px] lg:text-[17px] text-justify mb-[10px]'>
-              Interfere with or disrupt the operation of Schoolmates or the
-              servers or networks used to make Schoolmates available.
+              Interfere with or disrupt the operation of SchoolMates or the
+              servers or networks used to make SchoolMates available.
             </p>
           </div>
           <div className='flex space-x-[10px] pl-[40px]'>
             <p className='font-bold'>4.3.4</p>
             <p className='text-[16px] lg:text-[17px] text-justify mb-[10px]'>
-              Attempt to gain unauthorized access to Schoolmates or any other
+              Attempt to gain unauthorized access to SchoolMates or any other
               user’s account.
             </p>
           </div>
@@ -316,14 +316,14 @@ const TermsContent = () => {
             <p className='font-bold'>4.3.5</p>
             <p className='text-[16px] lg:text-[17px] text-justify mb-[10px]'>
               Transmit any viruses, worms, defects, Trojan horses, or any other
-              items of a destructive nature through Schoolmates.
+              items of a destructive nature through SchoolMates.
             </p>
           </div>
           <div className='flex space-x-[10px] pl-[40px]'>
             <p className='font-bold'>4.3.6</p>
             <p className='text-[16px] lg:text-[17px] text-justify mb-[10px]'>
               Use any robot, spider, scraper, or other automated means to access
-              Schoolmates for any purpose without our express written
+              SchoolMates for any purpose without our express written
               permission.
             </p>
           </div>
@@ -339,7 +339,7 @@ const TermsContent = () => {
           </p>
         </div>
         <p className='text-[16px] text-justify lg:text-[17px] mb-[10px] mt-[0px]'>
-          {`The Platform and all intellectual property rights associated with it, including trademarks, copyrights, and patents, are the exclusive property of Schoolmates. You are granted a non-exclusive, non-transferable license to use the Platform in accordance with these Terms. You may not modify, reproduce, distribute, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any content of Schoolmates without the prior written consent of Schoolmates.`}
+          {`The Platform and all intellectual property rights associated with it, including trademarks, copyrights, and patents, are the exclusive property of SchoolMates. You are granted a non-exclusive, non-transferable license to use the Platform in accordance with these Terms. You may not modify, reproduce, distribute, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any content of SchoolMates without the prior written consent of SchoolMates.`}
         </p>
       </div>
 
@@ -385,7 +385,7 @@ const TermsContent = () => {
           <div className='flex space-x-[10px] pl-[40px]'>
             <p className='font-bold'>6.2.1</p>
             <p className='text-[16px] lg:text-[17px] text-justify mb-[10px]'>
-              Schoolmates offers various payment methods, which may be subject
+              SchoolMates offers various payment methods, which may be subject
               to additional terms and conditions.
             </p>
           </div>
@@ -403,8 +403,8 @@ const TermsContent = () => {
           <div className='flex space-x-[10px] pl-[40px]'>
             <p className='font-bold'>6.3.1</p>
             <p className='text-[16px] lg:text-[17px] text-justify mb-[10px]'>
-              Schoolmates offers free trial for new subscribers, however, once
-              the trial elapses, Schoolmates does not offer a refund once
+              SchoolMates offers free trial for new subscribers, however, once
+              the trial elapses, SchoolMates does not offer a refund once
               subscription has been paid.
             </p>
           </div>
@@ -420,7 +420,7 @@ const TermsContent = () => {
           </p>
         </div>
         <p className='text-[16px] text-justify lg:text-[17px] mb-[10px] mt-[0px]'>
-          {`Users may terminate their access by contacting Schoolmates. All provisions of these Terms which by their nature should survive termination shall survive termination.`}
+          {`Users may terminate their access by contacting SchoolMates. All provisions of these Terms which by their nature should survive termination shall survive termination.`}
         </p>
       </div>
       {/* row 8 */}
@@ -432,7 +432,7 @@ const TermsContent = () => {
           </p>
         </div>
         <p className='text-[16px] text-justify lg:text-[17px] mb-[10px] mt-[0px]'>
-          {`To the fullest extent permitted by applicable law, Schoolmates shall not be liable for any direct, indirect, incidental, special, consequential, or exemplary damages, including but not limited to damages for loss of profits, goodwill, use, data, or other intangible losses arising out of or in connection with your use of or inability to use Schoolmates.`}
+          {`To the fullest extent permitted by applicable law, SchoolMates shall not be liable for any direct, indirect, incidental, special, consequential, or exemplary damages, including but not limited to damages for loss of profits, goodwill, use, data, or other intangible losses arising out of or in connection with your use of or inability to use SchoolMates.`}
         </p>
       </div>
       {/* row 9 */}
@@ -444,10 +444,10 @@ const TermsContent = () => {
           </p>
         </div>
         <p className='text-[16px] text-justify lg:text-[17px] mb-[10px] mt-[0px]'>
-          {`Schoolmates reserves the right to modify or update these Terms at any time, with or without prior notice.`}
+          {`SchoolMates reserves the right to modify or update these Terms at any time, with or without prior notice.`}
         </p>
         <p className='text-[16px] text-justify lg:text-[17px] mb-[10px] mt-[0px]'>
-          {`Any changes to these Terms will be effective immediately upon posting on the Schoolmates website or within the Schoolmates application.`}
+          {`Any changes to these Terms will be effective immediately upon posting on the SchoolMates website or within the SchoolMates application.`}
         </p>
       </div>
     </motion.div>

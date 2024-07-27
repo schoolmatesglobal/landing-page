@@ -11,7 +11,7 @@ const PrivacyContent = () => {
       className='md:px-[50px] px-[20px] md:max-w-7xl mx-auto'
     >
       <p className='text-[16px] text-justify lg:text-[17px] mb-[20px] mt-[40px]'>
-        {`Schoolmates is committed to protecting the privacy of our users (“Users”) in accordance with the NDPR and GDPR regulations. This Privacy Policy (“Policy”) explains how we collect, use, and disclose information in connection with the Schoolmates platform, including its website, web application, and mobile applications for teachers and parents (collectively, “Applications”).`}
+        {`SchoolMates is committed to protecting the privacy of our users (“Users”) in accordance with the NDPR and GDPR regulations. This Privacy Policy (“Policy”) explains how we collect, use, and disclose information in connection with the SchoolMates platform, including its website, web application, and mobile applications for teachers and parents (collectively, “Applications”).`}
       </p>
 
       {/* row 1 */}
@@ -199,7 +199,7 @@ const PrivacyContent = () => {
           <p className='font-bold'>5.1</p>
           <p className='text-[16px] lg:text-[17px] text-justify mb-[10px]'>
             <span className='font-bold'>Access:</span> You may request access to
-            your personal information by contacting Schoolmates.
+            your personal information by contacting SchoolMates.
           </p>
         </div>
         <div className='flex space-x-[10px] pl-[20px]'>
@@ -277,7 +277,7 @@ const PrivacyContent = () => {
           {`If you have any questions about this Policy, please contact us at info@schoolmateglobal.com`}
         </p>
         <p className='text-[16px] text-justify lg:text-[17px] mb-[10px] mt-[0px]'>
-          {`This Privacy Policy is incorporated into and subject to the Schoolmates Terms and Conditions. `}
+          {`This Privacy Policy is incorporated into and subject to the SchoolMates Terms and Conditions. `}
         </p>
       </div>
     </motion.div>
