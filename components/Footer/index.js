@@ -64,6 +64,10 @@ const Footer = () => {
           <Link href='/pricing' className={` link link-hover `}>
             <p className='w-full'>Pricing</p>
           </Link>
+          <Link href='https://schoolmateglobal.tawk.help/'  target='_blank'
+              rel='noreferrer' className={` link link-hover `}>
+            <p className='w-full'>Help</p>
+          </Link>
           <Link href='/privacy-policy' className={` link link-hover my-[5px]`}>
             <p className='w-full'>Privacy Policy</p>
           </Link>

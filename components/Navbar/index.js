@@ -409,6 +409,17 @@ const Navbar = () => {
                     <li>
                       <Link
                         onClick={handleClick}
+                        href='https://schoolmateglobal.tawk.help/'
+                        target='_blank'
+                        rel='noreferrer'
+                        className='btn-nav'
+                      >
+                        Help
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        onClick={handleClick}
                         href='/privacy-policy'
                         className='btn-nav'
                       >
