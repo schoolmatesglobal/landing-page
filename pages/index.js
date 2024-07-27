@@ -67,18 +67,18 @@ export default function Home({ trusted, testimonials }) {
 
 export async function getServerSideProps() {
   const apiServices = new APIServices();
-  // const trusted = await apiServices.getTrusted();
-  // const testimonials = await apiServices.getTestimonial();
+  const trusted = await apiServices.getTrusted();
+  const testimonials = await apiServices.getTestimonial();
 
-  // const trustedFormatted = await apiServices.formatData(trusted);
-  // const testimonialsFormatted = await apiServices.formatData(testimonials);
+  const trustedFormatted = await apiServices.formatData(trusted);
+  const testimonialsFormatted = await apiServices.formatData(testimonials);
 
   return {
     props: {
-      // trusted: trustedFormatted || [],
-      trusted: [],
-      // testimonials: testimonialsFormatted || [],
-      testimonials: [],
+      trusted: trustedFormatted || [],
+      // trusted: [],
+      testimonials: testimonialsFormatted || [],
+      // testimonials: [],
     },
   };
 }
