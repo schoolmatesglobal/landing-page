@@ -55,7 +55,7 @@ const PrivacyContent = () => {
           </p>
         </div>
         <div className='flex space-x-[10px] pl-[20px]'>
-          <p className='font-bold'>1.3</p>
+          <p className='font-bold'>1.4</p>
           <p className='text-[16px] lg:text-[17px] text-justify mb-[10px]'>
             Usage Data: Information about how Users interact with the Platform,
             such as IP address, device information, browsing activity, and
@@ -92,7 +92,7 @@ const PrivacyContent = () => {
           </p>
         </div>
         <div className='flex space-x-[10px] pl-[20px]'>
-          <p className='font-bold'>1.3</p>
+          <p className='font-bold'>2.3</p>
           <p className='text-[16px] lg:text-[17px] text-justify mb-[10px]'>
             Student Information: Name, identification number, grade level, and
             other information provided by the School Owner/Administrator with.
@@ -102,14 +102,14 @@ const PrivacyContent = () => {
           </p>
         </div>
         <div className='flex space-x-[10px] pl-[20px]'>
-          <p className='font-bold'>2.3</p>
+          <p className='font-bold'>2.4</p>
           <p className='text-[16px] lg:text-[17px] text-justify mb-[10px]'>
             To personalize the user experience and content based on user
             preferences and activity.
           </p>
         </div>
         <div className='flex space-x-[10px] pl-[20px]'>
-          <p className='font-bold'>2.4</p>
+          <p className='font-bold'>2.5</p>
           <p className='text-[16px] lg:text-[17px] text-justify mb-[10px]'>
             To fulfill requests from School Owners/Administrators, such as
             providing student reports or facilitating communication between
@@ -117,13 +117,13 @@ const PrivacyContent = () => {
           </p>
         </div>
         <div className='flex space-x-[10px] pl-[20px]'>
-          <p className='font-bold'>2.5</p>
+          <p className='font-bold'>2.6</p>
           <p className='text-[16px] lg:text-[17px] text-justify mb-[10px]'>
             To improve the Platform and develop new features and services.
           </p>
         </div>
         <div className='flex space-x-[10px] pl-[20px]'>
-          <p className='font-bold'>2.6</p>
+          <p className='font-bold'>2.7</p>
           <p className='text-[16px] lg:text-[17px] text-justify mb-[10px]'>
             To comply with legal and regulatory requirements.
           </p>
@@ -157,7 +157,7 @@ const PrivacyContent = () => {
           {/* <div className=''>
               <RxDotFilled className='text-[20px] text-black' />
                         </div> */}
-          <p className='font-bold'>3.1</p>
+          <p className='font-bold'>3.2</p>
           <p className='text-[16px] lg:text-[17px] text-justify mb-[10px]'>
             <span className='font-bold'>Service Providers:</span> We may share
             your information with third-party service providers who help us

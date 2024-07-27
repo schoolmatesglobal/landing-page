@@ -212,7 +212,7 @@ const TermsContent = () => {
             </p>
           </div>
           <div className='flex space-x-[10px] pl-[40px]'>
-            <p className='font-bold'>3.1.3</p>
+            <p className='font-bold'>3.3.3</p>
             <p className='text-[16px] lg:text-[17px] text-justify mb-[10px]'>
               Students must be of an age appropriate for using the Platform
               under the direct supervision of Teachers and Parents.
@@ -320,7 +320,7 @@ const TermsContent = () => {
             </p>
           </div>
           <div className='flex space-x-[10px] pl-[40px]'>
-            <p className='font-bold'>4.3.5</p>
+            <p className='font-bold'>4.3.6</p>
             <p className='text-[16px] lg:text-[17px] text-justify mb-[10px]'>
               Use any robot, spider, scraper, or other automated means to access
               Schoolmates for any purpose without our express written
